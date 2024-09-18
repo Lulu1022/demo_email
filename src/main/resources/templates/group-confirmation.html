@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成團通知</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 0 auto;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 24px;
+            color: #333;
+        }
+        .content h1 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .content p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+        }
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 14px;
+            color: #999;
+        }
+        .team-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .team-table th, .team-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            font-size: 14px;
+        }
+        .team-table th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+        .team-table td {
+            vertical-align: middle;
+        }
+        .team-table td:first-child {
+            font-weight: bold;
+        }
+        .team-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>🎉 {{ primaryValue }} 開團成功！🎉</h1>
+    </div>
+    <div class="content">
+        <p>親愛的 {{ primaryValue }} 成員,</p>
+        <p>{{ primaryValue }} 開團成功啦！😎</p>
+        <p>期待大家的參與，一起享受羽球的樂趣！</p>
+        <h2>Tibame 羽球團</h2>
+        <table class="team-table">
+            <tr>
+                <th>團員</th>
+            </tr>
+            {{ secondaryValues }}
+        </table>
+    </div>
+    <div class="footer">
+        <p>謝謝您使用我們的服務！</p>
+    </div>
+</div>
+</body>
+</html>
